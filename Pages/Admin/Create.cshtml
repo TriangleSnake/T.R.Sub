@@ -1,0 +1,43 @@
+@page
+@model T.R.Sub.Pages.Admin.CreateModel
+@{
+    ViewData["Title"] = "新增公告";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label>標題：</label>
+        <input type="text" asp-for="Announcement.Title" required />
+    </div>
+    <div>
+        <label>內容：</label>
+        <textarea asp-for="Announcement.Content" id="Content"></textarea>
+    </div>
+    <div>
+        <label>置頂：</label>
+        <input type="checkbox" asp-for="Announcement.IsTop" />
+    </div>
+    <div>
+        <label>附件：</label>
+        <input type="file" name="attachments" multiple />
+    </div>
+    <div>
+        <label>作者：</label>
+        <input type="text" asp-for="Announcement.Author" value="@User.Identity.Name" readonly />
+    </div>
+    <div>
+        <button type="submit">提交</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create(document.querySelector('#Content'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+}

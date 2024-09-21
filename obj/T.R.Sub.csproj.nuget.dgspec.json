@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub/T.R.Sub.csproj": {}
+    "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub.csproj": {}
   },
   "projects": {
-    "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub/T.R.Sub.csproj": {
+    "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub/T.R.Sub.csproj",
+        "projectUniqueName": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub.csproj",
         "projectName": "T.R.Sub",
-        "projectPath": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub/T.R.Sub.csproj",
+        "projectPath": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub.csproj",
         "packagesPath": "/Users/trianglesnake/.nuget/packages/",
-        "outputPath": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/T.R.Sub/obj/",
+        "outputPath": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/trianglesnake/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

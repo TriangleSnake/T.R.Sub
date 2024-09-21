@@ -1,10 +1,27 @@
 ﻿@page
-@model IndexModel
+@model AnnouncementBoard.Pages.IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "公告列表";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>@ViewData["Title"]</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>標題</th>
+            <th>發布日期</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ann in Model.Announcements)
+        {
+            <tr>
+                <td>
+                    @(ann.IsTop ? "[置頂]" : "") <a asp-page="./Details" asp-route-id="@ann.Id">@ann.Title</a>
+                </td>
+                <td>@ann.PublishDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+@page "{id:int}"
+@model T.R.Sub.Pages.DetailsModel
+@{
+    ViewData["Title"] = Model.Announcement.Title;
+}
+
+<h2>@Model.Announcement.Title</h2>
+
+<div>
+    <strong>作者：</strong> @Model.Announcement.Author
+</div>
+<div>
+    <strong>發佈時間：</strong> @Model.Announcement.PublishDate.ToString("yyyy-MM-dd")
+</div>
+<div>
+    @Html.Raw(Model.Announcement.Content)
+</div>
+
+@if (Model.Announcement.Attachments.Any())
+{
+    <h3>附件：</h3>
+    <ul>
+        <li><a href="@Url.Content("~/uploads/" + Model.Announcement.Attachments)" target="_blank">@Model.Announcement.Attachments</a></li>
+    </ul>
+}

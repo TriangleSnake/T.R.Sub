@@ -1,0 +1,39 @@
+@page
+@model AnnouncementBoard.Pages.Admin.IndexModel
+@using AnnouncementBoard.Models
+@{
+    ViewData["Title"] = "公告管理";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a asp-page="./Create">新增公告</a> |
+<a asp-page-handler="Export">导出 CSV</a>
+<a asp-page="/Account/Logout">登出</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>標題</th>
+            <th>發布日期</th>
+            <th>置頂</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ann in Model.Announcements)
+        {
+            <tr>
+                <td>@ann.Id</td>
+                <td>@ann.Title</td>
+                <td>@ann.PublishDate.ToString("yyyy-MM-dd")</td>
+                <td>@(ann.IsTop ? "是" : "否")</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@ann.Id">編輯</a> |
+                    <a asp-page="./Delete" asp-route-id="@ann.Id" onclick="return confirm('確定要刪除這篇公告？');">刪除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

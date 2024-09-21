@@ -1,19 +1,28 @@
-using Microsoft.AspNetCore.Mvc;
+using AnnouncementBoard.Models;
+using AnnouncementBoard.Services;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace T.R.Sub.Pages;
-
-public class IndexModel : PageModel
+namespace AnnouncementBoard.Pages
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
+    public class IndexModel : PageModel
     {
-        _logger = logger;
-    }
+        private readonly AnnouncementService _service;
 
-    public void OnGet()
-    {
+        public List<Announcement> Announcements { get; set; }
 
+        public IndexModel()
+        {
+            _service = new AnnouncementService();
+        }
+
+        public void OnGet()
+        {
+            Announcements = _service.GetAll()
+                .OrderByDescending(a => a.IsTop)
+                .ThenByDescending(a => a.PublishDate)
+                .ToList();
+        }
     }
 }
