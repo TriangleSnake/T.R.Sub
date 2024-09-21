@@ -245,10 +245,6 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/wwwroot/uploads/IMG_0264.jpeg",
-      "PackagePath": "staticwebassets/uploads/IMG_0264.jpeg"
-    },
-    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.T.R.Sub.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

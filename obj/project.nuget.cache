@@ -43,5 +43,18 @@
     "/Users/trianglesnake/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/Users/trianglesnake/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "讀取快取檔案 /Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/obj/project.nuget.cache 時發生問題: Operation timed out : '/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/obj/project.nuget.cache'"
+    },
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "取得套件弱點資料時發生錯誤: 無法載入來源 https://api.nuget.org/v3/index.json 的服務索引。"
+    }
+  ]
 }
