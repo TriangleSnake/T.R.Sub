@@ -4,7 +4,7 @@ using System.Globalization;
 
 public class UserService
 {
-    private readonly string filePath = "Data/users.csv";
+    private readonly string filePath = "Data/Users.csv";
 
     public List<User> GetAllUsers()
     {

@@ -5,23 +5,35 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using CsvHelper.Configuration;
+using Microsoft.AspNetCore.Http;
 namespace AnnouncementBoard.Services
 {
     public class AnnouncementService
     {
-        private readonly string filePath = "Data/announcements.csv";
-
+        private readonly string filePath = "Data/Announcements.csv";
         public List<Announcement> GetAll()
         {
             var announcements = new List<Announcement>();
 
-            if (!File.Exists(filePath))
+            if (!File.Exists(filePath)){
+                Console.WriteLine("File not found");
                 return announcements;
+            }
+                
 
             using (var reader = new StreamReader(filePath))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                announcements = csv.GetRecords<Announcement>().ToList();
+                try{
+                    announcements = csv.GetRecords<Announcement>().ToList();
+                    Console.WriteLine("成功取得資料");
+                }
+                catch (CsvHelperException)
+                {
+                    Console.WriteLine("資料檔案損毀，網站已暫時下線。");
+                    Environment.Exit(0);
+                }
+                
             }
 
             return announcements;
