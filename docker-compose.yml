@@ -4,7 +4,7 @@ services:
     ports:
       - "5176:5176"
     volumes:
-      - ./Pages:/app/Pages
       - ./wwwroot/uploads:/app/wwwroot/uploads
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    restart: always

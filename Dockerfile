@@ -12,4 +12,4 @@ ENV ASPNETCORE_ENVIRONMENT=Production
 # 暴露端口
 EXPOSE 5176 
 # 启动应用
-ENTRYPOINT ["dotnet", "run", "--urls=http://0.0.0.0:5176"]
+ENTRYPOINT ["/bin/sh", "-c", "cp /app/Data/AnnouncementsDefault.csv /app/Data/Announcements.csv && dotnet run --urls=http://0.0.0.0:5176"]
