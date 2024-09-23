@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6U/s+Yokma2Rsj1KfCbZojK37h597BE/1aREUmAS/74=",
+  "Hash": "pr3FjvPEabGCU2VV8m5RLhiGjhuAfBKW7njTK63varU=",
   "Source": "T.R.Sub",
   "BasePath": "_content/T.R.Sub",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/wwwroot/uploads/shell.cshtml",
+      "SourceId": "T.R.Sub",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/wwwroot/",
+      "BasePath": "_content/T.R.Sub",
+      "RelativePath": "uploads/shell.cshtml",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "wwwroot/uploads/shell.cshtml"
     }
   ]
 }

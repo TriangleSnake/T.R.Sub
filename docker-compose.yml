@@ -1,10 +1,13 @@
+version: '3.8'
 services:
   web:
     build: .
     ports:
-      - "5001:5001"
+      - "5176:5176"
     volumes:
-      - ./Data:/app/Data
-      - ./wwwroot/uploads:/app/wwwroot/uploads
+      - .:/app
+      - /app/bin
+      - /app/obj
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5176
+      - DOTNET_USE_POLLING_FILE_WATCHER=1

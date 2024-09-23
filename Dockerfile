@@ -1,26 +1,19 @@
-# 使用官方 .NET SDK 镜像作为构建环境
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# 使用官方 .NET SDK 镜像作为基础镜像
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /app
 
-# 复制 csproj 并还原依赖
-COPY *.csproj ./
-RUN dotnet restore
+# 安装 dotnet-watch 工具
+RUN dotnet tool install --global dotnet-watch
 
-# 复制所有文件并构建
-COPY . ./ 
-RUN dotnet publish -c Release -o out
-
-# 生成运行时镜像
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build /app/out .
+# 设置环境变量，以确保工具可用
+ENV PATH="${PATH}:/root/.dotnet/tools"
 
 # 设置环境变量
-ENV ASPNETCORE_URLS=http://+:5001
-ENV ASPNETCORE_ENVIRONMENT=Production
+ENV ASPNETCORE_URLS=http://+:5176
+ENV DOTNET_USE_POLLING_FILE_WATCHER=1
 
 # 暴露端口
-EXPOSE 5001
+EXPOSE 5176
 
 # 启动应用
-ENTRYPOINT ["dotnet", "T.R.Sub.dll"]
+ENTRYPOINT ["dotnet", "watch", "run", "--urls=http://0.0.0.0:5176"]
