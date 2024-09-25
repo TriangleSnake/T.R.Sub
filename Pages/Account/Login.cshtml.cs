@@ -16,6 +16,8 @@ namespace T.R.Sub.Pages.Account
         [BindProperty]
         public string Password { get; set; } = "";
 
+        [FromQuery]
+        public string? ReturnUrl { get; set; }
         public string ErrorMessage { get; set; } = "";
 
         private readonly UserService _userService;
@@ -53,7 +55,14 @@ namespace T.R.Sub.Pages.Account
                     new ClaimsPrincipal(claimsIdentity),
                     authProperties);
 
-                return RedirectToPage("/Admin/Index");
+                if (!string.IsNullOrEmpty(ReturnUrl))
+                {
+                    return Redirect(ReturnUrl);
+                }
+                else
+                {
+                    return RedirectToPage("/Index");
+                }
             }
 
             ErrorMessage = "帳號或密碼錯誤";

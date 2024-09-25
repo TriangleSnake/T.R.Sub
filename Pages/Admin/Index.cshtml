@@ -8,8 +8,7 @@
 <h2>@ViewData["Title"]</h2>
 
 <a asp-page="./Create">新增公告</a> |
-<a asp-page-handler="Export">导出 CSV</a>
-<a asp-page="/Account/Logout">登出</a>
+<a asp-page="/Download" asp-route-filename="Announcements.csv" target="_blank">匯出公告</a>
 
 <table>
     <thead>
