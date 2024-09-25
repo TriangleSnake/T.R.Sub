@@ -8,6 +8,7 @@ public class DownloadModel : PageModel
     {
         if (string.IsNullOrEmpty(filename))
         {
+            Console.WriteLine("filename is null");
             filename = ""; // 防止文件名为空
         }
         

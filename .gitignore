@@ -2,3 +2,5 @@
 wwwroot/uploads/
 bin/
 obj/
+Downloads/
+*.zip
