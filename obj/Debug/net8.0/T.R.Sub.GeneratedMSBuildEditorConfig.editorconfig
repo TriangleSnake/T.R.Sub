@@ -18,10 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/wwwroot/uploads/shell.cshtml]
-build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdC91cGxvYWRzL3NoZWxsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/Pages/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/Pages/Admin/DebugSecretPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vRGVidWdTZWNyZXRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/Pages/Admin/Delete.cshtml]
