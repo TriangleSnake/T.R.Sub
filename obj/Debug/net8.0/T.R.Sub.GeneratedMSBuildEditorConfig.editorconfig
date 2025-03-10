@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/exploit/webshell.cshtml]
+build_metadata.AdditionalFiles.TargetPath = ZXhwbG9pdC93ZWJzaGVsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/trianglesnake/Library/CloudStorage/SynologyDrive-main/GitHub/T.R.Sub/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

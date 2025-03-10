@@ -33,7 +33,6 @@ namespace AnnouncementBoard.Services
                     Console.WriteLine("資料檔案損毀，網站已暫時下線。");
                     Environment.Exit(0);
                 }
-                
             }
 
             return announcements;
